@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:49:49 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/11/26 14:41:29 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/11/27 15:01:06 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -466,7 +466,7 @@ int		ft_dprintf(int fd, const char *s, ...);
  * 
  * @return Number of characters printed
  */
-int	ft_printf(const char *s, ...);
+int		ft_printf(const char *s, ...);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
