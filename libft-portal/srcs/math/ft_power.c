@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   power.c                                            :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: celen <celen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 16:23:17 by macolomi          #+#    #+#             */
-/*   Updated: 2025/11/21 17:37:09 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/11/27 14:53:27 by celen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_power_int(int nb, int power)
 		return (0);
 	while (power > 0)
 	{
-		if (temp_nb != 0 \
-			&& (result > INT_MAX / temp_nb || result < INT_MIN / temp_nb))
+		if (temp_nb != 0 && \
+			(result > INT_MAX / temp_nb || result < INT_MIN / temp_nb))
 			return (INT_MAX);
 		result *= temp_nb;
 		power--;

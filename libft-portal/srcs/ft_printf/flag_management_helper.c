@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   flag_management_helper.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: celen <celen@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 10:05:56 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/10/21 10:31:57 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/11/27 14:36:58 by celen            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,6 @@ ssize_t	ft_get_size_hex(unsigned int n)
 	int	size;
 
 	size = 1;
-	if (n < 0)
-		size++;
 	while (n / 16)
 	{
 		n /= 16;
