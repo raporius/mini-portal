@@ -2,8 +2,9 @@ NAME = miniportal
 
 SRCS = \
 	srcs/builtins/ft_pwd.c \
-	srcs/parsing/envp_struct_funcs.c \
-	srcs/parsing/init.c
+	srcs/builtins/ft_env.c \
+	srcs/env/envp_struct_funcs.c \
+	srcs/env/init.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft-portal/libft.a
