@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pwd.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: celen <celen@student.42.fr>                +#+  +:+       +#+        */
+/*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 14:14:57 by celen             #+#    #+#             */
-/*   Updated: 2025/11/27 14:52:01 by celen            ###   ########.fr       */
+/*   Updated: 2025/11/28 14:13:22 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ int	ft_pwd(void)
 	char	*buffer;
 	size_t	size;
 
-	size = 10;
+	size = 16;
 	buffer = malloc(size + 1);
 	if (!buffer)
 		return (1);
 	while (!getcwd(buffer, size))
 	{
 		free (buffer);
-		size += 10;
+		size += 16;
 		buffer = malloc(size + 1);
 		if (!buffer)
 			return (1);
 	}
-	ft_printf("%s\n", buffer);
+	printf("%s\n", buffer);
 	free (buffer);
 	return (0);
 }

@@ -1,16 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 12:40:20 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/11/28 15:00:27 by macolomi         ###   ########.fr       */
+/*   Created: 2025/11/28 10:55:58 by macolomi          #+#    #+#             */
+/*   Updated: 2025/11/28 14:26:45 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "miniportal_celen.h"
+
+int	main(int argc, char **argv)
 {
-	return (c >= '0' && c <= '9');
+	argc = 0;
+	printf("\e[38;2;0;255;255m"ASCII_ART"\e[0m");
+	ft_pwd();
+	ft_exit(argv);
 }

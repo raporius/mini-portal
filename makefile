@@ -1,6 +1,6 @@
 NAME = miniportal
 
-SRCS =	srcs/builtins/ft_pwd.c
+SRCS =	srcs/main.c srcs/builtins/ft_pwd.c srcs/builtins/ft_exit.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft-portal/libft.a
