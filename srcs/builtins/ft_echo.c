@@ -1,36 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pwd.c                                           :+:      :+:    :+:   */
+/*   ft_echo.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/27 14:14:57 by celen             #+#    #+#             */
-/*   Updated: 2025/12/01 13:16:36 by macolomi         ###   ########.fr       */
+/*   Created: 2025/12/01 13:15:39 by macolomi          #+#    #+#             */
+/*   Updated: 2025/12/01 14:18:41 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "miniportal_celen.h"
 
-int	ft_pwd(void)
+static int	check_n(char *str, int *n)
 {
-	char	*buffer;
-	size_t	size;
+	int	i;
 
-	size = 16;
-	buffer = malloc(size + 1);
-	if (!buffer)
-		return (1);
-	while (!getcwd(buffer, size))
+	i = 1;
+	if (ft_strncmp(str, "-n", 2))
+		return (0);
+	while (str[i])
 	{
-		free (buffer);
-		size += 16;
-		buffer = malloc(size + 1);
-		if (!buffer)
-			return (1);
+		if (str[i] != 'n')
+			return (0);
+		i++;
 	}
-	printf("%s\n", buffer);
-	free (buffer);
+	*n = 1;
+	return (1);
+}
+
+int	ft_echo(t_cmds *cmds)
+{
+	int	n;
+	int	i;
+
+	i = 1;
+	n = 0;
+	while (cmds->argv[i] && check_n(cmds->argv[i], &n))
+		i++;
+	while (cmds->argv[i])
+	{
+		printf("%s", cmds->argv[i]);
+		if (cmds->argv[i + 1])
+			printf(" ");
+		i++;
+	}
+	if (n)
+		return (0);
+	printf("\n");
 	return (0);
 }

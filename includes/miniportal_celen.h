@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 14:20:32 by celen             #+#    #+#             */
-/*   Updated: 2025/11/28 15:14:44 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:19:06 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	big_big_free(char **to_free);
 
 int		ft_pwd(void);
 int		ft_exit(t_cmds *cmds);
+int		ft_echo(t_cmds *cmds);
 
 //utils
 

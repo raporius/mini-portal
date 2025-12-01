@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:55:58 by macolomi          #+#    #+#             */
-/*   Updated: 2025/11/28 14:26:45 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/01 14:17:06 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	main(int argc, char **argv)
 {
-	argc = 0;
-	printf("\e[38;2;0;255;255m"ASCII_ART"\e[0m");
-	ft_pwd();
-	ft_exit(argv);
 }
+	

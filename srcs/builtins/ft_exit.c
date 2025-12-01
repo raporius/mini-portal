@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 12:41:30 by macolomi          #+#    #+#             */
-/*   Updated: 2025/11/28 15:14:50 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/01 13:25:32 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int	ft_exit(t_cmds *cmds)
 		exit(0);
 	if (numerical_check(cmds))
 	{
-		printf("miniportal: exit: %s: numeric argument required\n");
+		printf("miniportal: exit: %s:"
+			" numeric argument required\n", cmds->argv[1]);
 		exit(2);
 	}
 	if (len_tab(cmds->argv) > 2)
