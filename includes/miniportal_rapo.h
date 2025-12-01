@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:39:09 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/12/01 15:42:44 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:54:25 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,21 @@ t_envp	*envnode_new(char *name, char *val);
 void	envnode_add(t_envp **envp, t_envp *new);
 void	envnode_remove_by_name(t_envp **envp, char *to_remove);
 void	envp_clean(t_envp **envp);
+t_envp	*search_key(char *key, t_envp *env);
 
 //envp manipulation
 t_envp	*init_envp(char **envp);
 
 //builtins
 int		ft_env(t_cmds *cmd);
+int		ft_export(t_cmds *cmd);
+
+//export utils
+int		create_insert_key(char *data[2], t_envp *env);
+void	replace_key(char *data[2], t_envp *key);
+
+//utils
+int		len_tab(char **argv);
+void	big_big_free(char **to_free);
 
 #endif

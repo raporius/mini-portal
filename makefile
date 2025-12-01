@@ -1,8 +1,11 @@
 NAME = miniportal
 
 SRCS = \
+	srcs/utils_rapo.c \
 	srcs/builtins/ft_pwd.c \
 	srcs/builtins/ft_env.c \
+	srcs/builtins/ft_export_utils.c \
+	srcs/builtins/ft_export.c \
 	srcs/env/envp_struct_funcs.c \
 	srcs/env/init.c
 

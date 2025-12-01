@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:23:39 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/11/28 14:24:41 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:54:57 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,16 @@ void	envp_clean(t_envp **envp)
 		(*envp) = (*envp)->next;
 		free(current);
 	}
+}
+
+t_envp	*search_key(char *key, t_envp *env)
+{
+	while (env)
+	{
+		if (!ft_strncmp(env->name, key,
+			max_int(ft_strlen(env->name), ft_strlen(key))))
+			return (env);
+		env = env->next;
+	}
+	return (NULL);
 }
