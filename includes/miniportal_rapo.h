@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:39:09 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/12/01 15:54:25 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/02 13:04:54 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ t_envp	*init_envp(char **envp);
 //builtins
 int		ft_env(t_cmds *cmd);
 int		ft_export(t_cmds *cmd);
+int		ft_unset(t_cmds *cmd);
 
 //export utils
 int		create_insert_key(char *data[2], t_envp *env);
