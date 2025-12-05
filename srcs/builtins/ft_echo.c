@@ -6,13 +6,13 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 13:15:39 by macolomi          #+#    #+#             */
-/*   Updated: 2025/12/01 14:18:41 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/03 13:34:44 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniportal_celen.h"
 
-static int	check_n(char *str, int *n)
+static int	check_n(char *str, bool *n)
 {
 	int	i;
 
@@ -31,8 +31,8 @@ static int	check_n(char *str, int *n)
 
 int	ft_echo(t_cmds *cmds)
 {
-	int	n;
-	int	i;
+	int		i;
+	bool	n;
 
 	i = 1;
 	n = 0;
@@ -45,8 +45,7 @@ int	ft_echo(t_cmds *cmds)
 			printf(" ");
 		i++;
 	}
-	if (n)
-		return (0);
-	printf("\n");
+	if (!n)
+		printf("\n");
 	return (0);
 }

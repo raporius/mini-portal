@@ -6,11 +6,10 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 14:14:57 by celen             #+#    #+#             */
-/*   Updated: 2025/12/01 13:16:36 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/05 13:51:29 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "miniportal_celen.h"
 
 int	ft_pwd(void)
