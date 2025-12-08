@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:39:09 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/12/02 13:04:54 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/08 15:15:49 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,13 @@ void	replace_key(char *data[2], t_envp *key);
 //utils
 int		len_tab(char **argv);
 void	big_big_free(char **to_free);
+
+//tokenizer utils
+int		is_operator(char c, char prev, int mode);
+void	manage_quote_flags(char c, int flags[3]);
+void	loop_start(int flags[3], int *i, int *token_len, char const *s);
+
+//main parsing funcs
+t_list	*tokenpie_cutter(char const *s);
 
 #endif

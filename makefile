@@ -7,7 +7,9 @@ SRCS = \
 	srcs/builtins/ft_export_utils.c \
 	srcs/builtins/ft_export.c \
 	srcs/env/envp_struct_funcs.c \
-	srcs/env/init.c
+	srcs/env/init.c \
+	srcs/parser/tokenizer.c  \
+	srcs/parser/tokenizer_utils.c
 
 OBJS = $(SRCS:.c=.o)
 LIBFT = ./libft-portal/libft.a
