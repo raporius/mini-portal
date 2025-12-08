@@ -6,13 +6,11 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 14:36:16 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/12/08 15:22:11 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/08 15:24:43 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "miniportal_rapo.h"
-#include <readline/readline.h>
-#include <readline/history.h>
 
 static int	the_knife(char const *s, int i, int token_len, t_list **tokens)
 {
