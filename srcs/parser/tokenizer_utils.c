@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 14:56:57 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/12/08 15:17:31 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/09 13:20:54 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,18 @@ void	loop_start(int flags[3], int *i, int *token_len, char const *s)
 		(*i)++;
 }
 
-int	is_operator(char c, char prev, int mode)
+int	is_operator(char const *s, int i, int mode)
 {
 	if (mode)
 	{
-		if (prev == c && prev != '|')
+		if (s[i - 1] == s[i] && s[i - 1] != '|')
 			return (1);
 	}
 	else
 	{
-		if (c == '<' || c == '>' || c == '|')
+		if (s[i] == '<' || s[i] == '>' || s[i] == '|')
 			return (1);
 	}
 	return (0);
 }
+

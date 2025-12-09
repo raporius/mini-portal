@@ -6,7 +6,7 @@
 /*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 14:36:16 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/12/08 15:24:43 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/09 13:22:53 by rdestruh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,14 @@ static int	knife_precision(char const *s, int i, int *token_len, int flags[3])
 	}
 	else if (flags[0])
 	{
-		if (is_operator(s[i + *token_len], s[i + *token_len - 1], 1))
+		if (is_operator(s, i + *token_len, 0))
 			(*token_len)++;
 		return (1);
 	}
 	else if (!flags[1] && !flags[2] && (s[i + *token_len] == '\''
 			|| s[i + *token_len] == '"'))
 		manage_quote_flags(s[i + *token_len], flags);
-	else if (i + *token_len - 1 >= 0 && !flags[1] && !flags[2]
-		&& is_operator(s[i + *token_len], s[i + *token_len - 1], 0))
+	else if (!flags[1] && !flags[2] && is_operator(s, i + *token_len, 0))
 	{
 		flags[0] = 1;
 		if (*token_len != 0 && s[i + *token_len - 1] != ' ')
