@@ -1,4 +1,9 @@
-acsses autorisation existe fok
-stat %F type
-chdir
-edit pwd et old pwd
+exec:
+
+	check builtins
+	if builtins exect them
+	cree un child sauf si exit
+gerer les pipe
+open les fd
+si enfant pas denier close fd[1]
+si enfant dernier close pas dup2[1] close[1]

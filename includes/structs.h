@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdestruh <rdestruh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 15:03:15 by rdestruh          #+#    #+#             */
-/*   Updated: 2025/11/27 16:05:15 by rdestruh         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:11:58 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_cmds
 	t_envp			*envp;
 	char			*infile;
 	char			*outfile;
+	bool			outfile_mode;
 	bool			is_builtin;
 	struct s_cmds	*next;
 }	t_cmds;

@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 14:42:20 by macolomi          #+#    #+#             */
-/*   Updated: 2025/12/01 14:11:51 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:04:16 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_killprog(t_cmds **cmds)
 		if (current->argv)
 			big_big_free(current->argv);
 		if (current->envp)
-			// ft_killenvp(current->envp);
+			ft_killenvp(current->envp);
 		if (current->infile)
 			free(current->infile);
 		if (current->outfile)
