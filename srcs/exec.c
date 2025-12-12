@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 13:04:43 by macolomi          #+#    #+#             */
-/*   Updated: 2025/12/10 16:02:56 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/12 16:16:29 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ pid_t	last_pipe(t_cmds *cmds, int new_fd)
 	return (pid);
 }
 
-
-
 void	pipex(t_cmds *cmds)
 {
 	t_cmds	*current;
@@ -79,7 +77,7 @@ void	pipex(t_cmds *cmds)
 
 	current = cmds;
 	i = 0;
-	if (!ft_strncmp(cmds->argv[0], "exit", 4))
+	if (!ft_strncmp(cmds->argv[0], "exit", 5))
 	{
 		ft_exit(cmds);
 		return ;
@@ -96,5 +94,18 @@ void	pipex(t_cmds *cmds)
 		i++;
 		current = current->next;
 	}
-	waitpid
+	last_pipe(cmds->next, new_fd[1]);
+	wait_pids(p, i + 1);
+}
+
+void	ft_exec(t_cmds *cmds)
+{
+	if (!ft_strncmp(cmds->argv[0], "cd", 3))
+		ft_cd(cmds);
+	if (!ft_strncmp(cmds->argv[0], "echo", 5))
+		ft_echo(cmds);
+	if (!ft_strncmp(cmds->argv[0], "pwd", 4))
+		ft_pwd();
+	else
+		execve(cmds->argv[1]);
 }

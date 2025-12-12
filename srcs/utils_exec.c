@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 14:48:01 by macolomi          #+#    #+#             */
-/*   Updated: 2025/12/10 15:15:40 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/12 16:05:31 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,18 @@ int	outfile(t_cmds *cmds)
 	else
 		fd = open(last->outfile, O_WRONLY | O_APPEND);
 	return (fd);
+}
+
+void	wait_pids(pid_t *pid_list, int size)
+{
+	int	i;
+
+	waitpid(pid_list[size - 1], NULL, 0);
+	close(0);
+	i = 0;
+	while (i < size - 1)
+	{
+		waitpid(pid_list[i], NULL, 0);
+		i++;
+	}
 }

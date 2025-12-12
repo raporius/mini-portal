@@ -6,7 +6,7 @@
 /*   By: macolomi <macolomi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 14:20:32 by celen             #+#    #+#             */
-/*   Updated: 2025/12/10 15:45:01 by macolomi         ###   ########.fr       */
+/*   Updated: 2025/12/12 16:03:34 by macolomi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		ft_echo(t_cmds *cmds);
 
 int		len_tab(char **argv);
 int		pipe_nbr(t_cmds *cmds);
+void	wait_pids(int *pid_list, int size);
 pid_t	*get_pid_t(t_cmds *cmds);
 t_cmds	*get_last_cmds(t_cmds *cmds);
 
